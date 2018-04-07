@@ -20,6 +20,9 @@ def submission():
 	if len(request.form['comment']) == 0:
 		flash("Comment field must not be empty.")
 		return redirect('/')
+	elif len(request.form['comment']) > 120:
+		flash("Comment must be no more than 120 characters.")
+		return redirect('/')
 	session['comment']=request.form['comment']
 	return redirect('/results')
 app.run(debug=True)
