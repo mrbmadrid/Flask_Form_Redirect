@@ -21,6 +21,10 @@
 	vertical-align: top;
 }
 
+.error {
+	color: red;
+}
+
 .col>* {
 	vertical-align: top;
 }
